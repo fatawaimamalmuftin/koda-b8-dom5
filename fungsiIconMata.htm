@@ -61,7 +61,6 @@
         .pilih-nav {
             display: flex;
             justify-content: center;
-            align-items: center;
             gap: 20px;
             font-size: 26px;
         }
@@ -83,6 +82,7 @@
             .pilih-nav {
                 display: none;
                 flex-direction: column;
+                justify-content: start;
                 position: absolute;
                 top: 90px;
                 right: 0;
@@ -92,7 +92,7 @@
                 gap: 15px;
             }
 
-            .active {
+            .pilih-nav.active {
                 display: flex;
             }
         }
@@ -141,7 +141,7 @@
             // console.log("click")
 
             if (navLink.classList.contains("active")) {
-                menuIcon.setAttribute("data-lucide", "X")
+                menuIcon.setAttribute("data-lucide", "x")
             } else {
                 menuIcon.setAttribute("data-lucide", "menu")
             }
