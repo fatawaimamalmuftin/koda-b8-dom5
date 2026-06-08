@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiden PassWord</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+
+        .kolom-password {
+            height: 30px;
+            max-width: 400px;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="password" id="kolom-password" placeholder="masukan PassWord" class="kolom-password">
+
+        <button type="button" id="btn-toggle">
+            <i id="my-icon" data-lucide="eye-closed"></i>
+        </button>
+    </form>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script>
+        const inputPass = document.getElementById("kolom-password");
+        const btn = document.getElementById("btn-toggle")
+        const icon = document.getElementById("my-icon")
+
+        btn.addEventListener("click", () => {
+            const statusIcon = icon.getAttribute("data-lucide");
+
+            if (statusIcon === "eye-closed") {
+                icon.setAttribute("data-lucide", "eye")
+                inputPass.type = "text";
+            } else {
+                icon.setAttribute("data-lucide", "eye-closed")
+                inputPass.type = "password";
+            }
+
+            lucide.createIcons();
+        })
+    </script>
+
+</body>
+
+</html>
