@@ -9,5 +9,5 @@
 # hamburger Nav
 ## Deskriptif
 1. get berdasarkan id : btn-burger, nav bagian kanan, icon nya yg dari lucid
-2. clas nav link ganti clas untuk menjadi resposif
+2. clas nav link nambah clas untuk menjadi resposif
 3. dan mengganti type dari lucide nya dari X ke menu dan sebaliknya
